@@ -5,7 +5,7 @@ const Header = ({ onSearch }) => {
   return (
     <div className="p-4 bg-slate-900 flex items-center justify-between">
       <div className="flex items-center space-x-4">
-        <h1 className="uppercase text-[35px] text-red-700 font-bold">Movie</h1>
+        <h1 className="uppercase text-[35px] text-red-700 font-bold cursor-pointer" onClick={() => { window.location.reload(false); }}>Movie</h1>
         <nav className="flex items-center space-x-4">
           <a href="#" className="text-white hover:text-red-500 transition-all duration-300 ease-linear">Home</a>
           <a href="#" className="text-white hover:text-red-500 transition-all duration-300 ease-linear">About</a>
@@ -22,7 +22,7 @@ const Header = ({ onSearch }) => {
   )
 }
 Header.propTypes = {
-  onSearch: PropTypes.func,
+  onSearch: PropTypes.func
 
 }
 export default Header

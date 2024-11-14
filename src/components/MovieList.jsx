@@ -34,7 +34,7 @@ const MovieList = ({ title, data }) => {
           <div key={item.id} className='w-[200px] h-[300px] relative group overflow-hidden' onClick={() => handleTrailer(item.id)}>
             <div className='group-hover:scale-105 transition-all duration-300 ease-linear w-full h-full cursor-pointer'>
               <div className='absolute top-0 left-0 w-full h-full bg-black/40' />
-              <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt='img' className='w-full h-full object-cover' />
+              <img src={`${import.meta.env.VITE_IMAGE_URL}${item.poster_path}`} alt='img' className='w-full h-full object-cover' />
             </div>
             <div className='absolute bottom-2 left-2'>
               <p className='uppercase text-md '>{item.title || item.original_title}</p>
