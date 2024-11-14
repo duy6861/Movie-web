@@ -46,6 +46,7 @@ function App() {
         fetch(url2, options),
       ])
       const popularData = await res1.json();
+      console.log(popularData)
       const topRateData = await res2.json();
       setMoviePopular(popularData.results)
       setMovieTopRate(topRateData.results)
